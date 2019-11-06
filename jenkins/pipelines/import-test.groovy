@@ -1,3 +1,5 @@
+import jenkins.lib.test as libTest
+
 pipeline {
   agent any
 
@@ -5,7 +7,6 @@ pipeline {
     stage('Invoke sibling...') {
       steps {
         echo 'Invoking sibling...'
-        import jenkins.lib.test as libTest
         libTest('hello')
       }
     }
