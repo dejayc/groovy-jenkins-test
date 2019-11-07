@@ -1,4 +1,4 @@
-import jenkins.lib.test as libTest
+import lib.test as libTest
 
 pipeline {
   agent any
