@@ -1,4 +1,4 @@
-import lib.test as libTest
+def imports = [:]
 
 pipeline {
   agent any
@@ -7,7 +7,10 @@ pipeline {
     stage('Invoke sibling...') {
       steps {
         echo 'Invoking sibling...'
-        libTest('hello')
+        script {
+          imports.test = load 'jenkins/lib/test.groovy'
+          imports.test.test('hello!')
+        }
       }
     }
   }
