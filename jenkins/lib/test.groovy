@@ -1,5 +1,5 @@
-void test(String message) {
-  step {
-    echo 'Testing: [${message}]'
-  }
+def test(String message) {
+  echo 'Testing: [${message}]'
 }
+
+return this
